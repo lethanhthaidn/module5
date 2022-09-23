@@ -1,0 +1,13 @@
+<h1>Pet profile</h1>
+<h2>Pet name: {{pet.name}}</h2>
+<img [src]="pet.image" style="max-width: 100%">
+<br>
+<label>
+  Pet name:
+  <input type = "text" [(ngModel)]="pet.name">
+</label>
+<br>
+<label>
+  Pet image:
+  <input type = "text" [(ngModel)] = "pet.image" >
+</label>
