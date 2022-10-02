@@ -1,10 +1,24 @@
-<p>Danh sách mã màu:</p>
-<select #element (change)="changeColorValue(element.value)">
-  <option *ngFor="let color of colors" [ngValue]="color.id">{{color.name}}</option>
-</select>
-<div style="width:500px; height: 500px;" [style.backgroundColor]="code"></div>
+<!--<p>Danh sách mã màu:</p>-->
+<!--<select #element (change)="changeColorValue(element.value)">-->
+<!--  <option *ngFor="let color of colors" [ngValue]="color.id">{{color.name}}</option>-->
+<!--</select>-->
+<!--<div style="width:500px; height: 500px;" [style.backgroundColor]="code"></div>-->
 
-
+<div [style]="bgColor" class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-outline-danger ">
+    <input type="radio" name="colorCheck1" (change)="checkChoice('red')"> Red
+  </label>
+  <label class="btn btn-outline-primary">
+    <input type="radio" name="colorCheck2" (change)="checkChoice('blue')"> Blue
+  </label>
+  <label class="btn btn-outline-warning">
+    <input type="radio" name="colorCheck3" (change)="checkChoice('yellow')"> Yelow
+  </label>
+  <label class="btn btn-outline-dark">
+    <input type="radio" name="colorCheck4" (change)="checkChoice('black')"> Black
+  </label>
+</div>
+<h2>{{bgColor}}</h2>
 
 
 
